@@ -1,0 +1,23 @@
+CREATE TABLE flower_shop(id INTEGER PRIMARY KEY, name TEXT, cost INTEGER, quantity NUMERIC, season TEXT); 
+
+INSERT into flower_shop VALUES(1, "tulips", 5, 10, "Autumn");
+INSERT into flower_shop VALUES(2, "roses", 4, 10, "Spring to Autumn");
+INSERT into flower_shop VALUES(3, "peonies", 15, 10, "Spring to Summer");
+INSERT into flower_shop VALUES(4, "sunflowers", 50, 10, "Annual");
+INSERT into flower_shop VALUES(5, "lilies", 55, 10, "Summer to Autumn");
+INSERT into flower_shop VALUES(6, "poppy", 2, 10, "Winter to Summer");
+INSERT into flower_shop VALUES(7, "hydrangeas", 1, 10, "Spring to Autumn");
+INSERT into flower_shop VALUES(8, "orchids", 500, 10, "Autumn to Spring");
+INSERT into flower_shop VALUES(9, "hyacinths", 25, 10, "Spring");
+INSERT into flower_shop VALUES(10, "carnations", 35, 10, "Spring");
+INSERT into flower_shop VALUES(11, "daffodils", 45, 10, "Spring");
+INSERT into flower_shop VALUES(12, "blue bonnet", 48, 10, "Annual");
+INSERT into flower_shop VALUES(13, "amaryllis", 47, 10, "Annual");
+INSERT into flower_shop VALUES(14, "dahlias", 15, 10, "Summer to Autumn");
+INSERT into flower_shop VALUES(15, "daisies", 10, 10, "Spring to Autumn");
+
+--Display the database ordered by cost.
+SELECT * FROM flower_shop ORDER BY cost desc;
+
+--What is the max cost of an item in the flower shop
+SELECT max(cost) FROM flower_shop
