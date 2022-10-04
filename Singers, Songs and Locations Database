@@ -55,7 +55,7 @@ INSERT INTO location (p_id, placeofbirth) VALUES (12, "Syracuse, NY");
 INSERT INTO location (p_id, placeofbirth) VALUES (1, "Arecio, Puerto Rico");
 INSERT INTO location (p_id, placeofbirth) VALUES (9, "New York, NY");
 INSERT INTO location (p_id, placeofbirth) VALUES (15, "Rumson, New Jersey");
-INSERT INTO location (p_id, placeofbirth) VALUES (11, " East Brunswick, New Jersey");
+INSERT INTO location (p_id, placeofbirth) VALUES (11, "East Brunswick, New Jersey");
 INSERT INTO location (p_id, placeofbirth) VALUES (8, "South Korea");
 INSERT INTO location (p_id, placeofbirth) VALUES (13, "Calgary, Canada");
 INSERT INTO location (p_id, placeofbirth) VALUES (10, "Russia");
