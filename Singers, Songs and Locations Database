@@ -36,7 +36,7 @@ INSERT INTO songs (person_id, artistsongs) VALUES (15, "Left and Right (Feat. Ju
 INSERT INTO songs (person_id, artistsongs) VALUES (9, "Supernova");
 INSERT INTO songs (person_id, artistsongs) VALUES (12, "Sunflower");
 INSERT INTO songs (person_id, artistsongs) VALUES (10, "Clarity");
-INSERT INTO songs (person_id, artistsongs) VALUES (14, "STAR WALKIN' (League of Legends Worlds Anthem");
+INSERT INTO songs (person_id, artistsongs) VALUES (14, "STAR WALKIN' (League of Legends Worlds Anthem)");
 INSERT INTO songs (person_id, artistsongs) VALUES (8, "Lilac");
 INSERT INTO songs (person_id, artistsongs) VALUES (11, "To All The Boys I've Loved Before");
 INSERT INTO songs (person_id, artistsongs) VALUES (13, "she's all i wanna be");
