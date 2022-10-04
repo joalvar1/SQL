@@ -1,0 +1,55 @@
+-- Table of singer's name and age
+CREATE TABLE singers (id INTEGER PRIMARY KEY, artistname TEXT, age INTEGER);
+
+--Insert of data
+INSERT INTO singers (artistname, age) VALUES ("iann dior", 23);
+INSERT INTO singers (artistname, age) VALUES ("Machine Gun Kelly", 32);
+INSERT INTO singers (artistname, age) VALUES ("Bad Bunny", 28);
+INSERT INTO singers (artistname, age) VALUES ("KID LAROI", 19);
+INSERT INTO singers (artistname, age) VALUES ("JVKE", 21);
+INSERT INTO singers (artistname, age) VALUES ("Dream", 23);
+INSERT INTO singers (artistname, age) VALUES ("Sueco", 25);
+
+--Table of artist's songs with their respective id of the singer
+CREATE TABLE songs (id INTEGER PRIMARY KEY, person_id INTEGER, artistsongs TEXT);
+
+--Insert of data
+INSERT INTO songs (person_id, artistsongs) VALUES (7, "Paralyzed");
+INSERT INTO songs (person_id, artistsongs) VALUES (3, "Yonaguni");
+INSERT INTO songs (person_id, artistsongs) VALUES (5, "this is what falling in love feels like");
+INSERT INTO songs (person_id, artistsongs) VALUES (1, "Live Fast Die Numb");
+INSERT INTO songs (person_id, artistsongs) VALUES (6, "Mask");
+INSERT INTO songs (person_id, artistsongs) VALUES (4, "Thousand Miles");
+INSERT INTO songs (person_id, artistsongs) VALUES (2, "DAYWALKER! feat. CORPSE");
+INSERT INTO songs (person_id, artistsongs) VALUES (5, "golden hour");
+INSERT INTO songs (person_id, artistsongs) VALUES (7, "Motel 666");
+INSERT INTO songs (person_id, artistsongs) VALUES (2, "twin flame");
+INSERT INTO songs (person_id, artistsongs) VALUES (7, "Drunk Dial");
+
+--Table of place of birth of singers with their respective id
+CREATE TABLE location (id INTEGER PRIMARY KEY, p_id INTEGER, placeofbirth TEXT);
+
+INSERT INTO location (p_id, placeofbirth) VALUES (5, "America");
+INSERT INTO location (p_id, placeofbirth) VALUES (7, "Los Angeles, California");
+INSERT INTO location (p_id, placeofbirth) VALUES (3, "Almirante Sur, Puerto Rico");
+INSERT INTO location (p_id, placeofbirth) VALUES (4, "Waterloo, Australia");
+INSERT INTO location (p_id, placeofbirth) VALUES (6, "USA");
+INSERT INTO location (p_id, placeofbirth) VALUES (2, "Houston, TX");
+INSERT INTO location (p_id, placeofbirth) VALUES (1, "Arecio, Puerto Rico");
+
+--Dataset
+SELECT * from singers;
+SELECT * from songs;
+--SELECT * from location;
+
+--Display singer's name next to their songs in ascending order
+SELECT s.artistname AS Artist_name, so.artistsongs AS Artist_songs FROM singers s
+    JOIN songs so  
+    ON so.person_id = s.id
+    GROUP BY artistsongs
+    ORDER BY s.id ASC;
+    
+--Display singer's name next to their place of birth
+SELECT s.artistname AS Artist_name, l.placeofbirth AS Place_of_birth FROM singers s
+    JOIN location l
+    ON l.p_id = s.id;
